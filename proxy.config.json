@@ -1,0 +1,12 @@
+{
+    "/path/*":{
+        "target":"https://fullbright-medlab-rest.herokuapp.com",
+        "secure":false ,
+        "logLevel": "debug",
+        "changeOrigin": true,
+        "pathRewrite": {
+        "^/path": ""
+        }
+
+    }
+}
