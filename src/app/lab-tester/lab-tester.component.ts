@@ -12,17 +12,23 @@ import { Report } from '../classes/submit-report/report';
   styleUrls: ['./lab-tester.component.scss']
 })
 export class LabTesterComponent implements OnInit {
-  
+  private testData = [
+    {Test_name : "White Blood Test(WBC) count", unit:"billion cells/L"},
+    {Test_name : "Red Blood Cell (RBC) count",  unit : "trillion cells/L"},
+    {Test_name : "Platelets count",  unit:"billion/L"},
+    {Test_name : "Hemoblibin" ,  unit:"grams/dL"},
+    {Test_name : "Hemotocrite",  unit: "%percent"},
+  ];
 
   public userName:string;
-  toggle:boolean;//dummy variable for testing purposes
-  testingReport:TestReport;
-  error:string;
-  speciman:FormGroup;
-  testDataForm:FormGroup;
-  items: FormArray;
-  completeStatus:Boolean  = false;
-  errorState:boolean = false;
+  public toggle:boolean;//dummy variable for testing purposes
+  public testingReport:TestReport;
+  public error:string;
+  public speciman:FormGroup;
+  public testDataForm:FormGroup;
+  public items: FormArray;
+  public completeStatus:Boolean  = false;
+  public errorState:boolean = false;
 
   constructor(private auth:AuthService, private router:Router, private report: ReportSubmitService,
                 private fb:FormBuilder) { }

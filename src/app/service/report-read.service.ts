@@ -9,7 +9,7 @@ import { TestReportData } from '../classes/report/test-report-data';
 })
 export class ReportReadService {
 
-  finalReportURL = "path/api/form/report/view/"
+  private finalReportURL = "path/api/form/report/view/"
   constructor(private http:HttpClient) { }
 
   getDataReport(recieptId):Observable<TestReportData>{

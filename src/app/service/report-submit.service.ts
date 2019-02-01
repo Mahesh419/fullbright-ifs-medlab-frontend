@@ -10,8 +10,8 @@ import { FormGroup } from '@angular/forms';
   providedIn: 'root'
 })
 export class ReportSubmitService {
-  reportURL:string = 'path/api/form/report/';
-  dataSendURL ="path/api/form/report/data";
+  private reportURL:string = 'path/api/form/report/';
+  private dataSendURL ="path/api/form/report/data";
   constructor(private http:HttpClient) { }
 
   public getReport(specimanId:string):Observable<TestReport>{

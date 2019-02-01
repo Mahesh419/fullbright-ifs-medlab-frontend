@@ -10,12 +10,12 @@ import { AuthService } from '../../service/auth-servise.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-     listTitles: any[];
+    private listTitles: any[];
     location: Location;
       mobile_menu_visible: any = 0;
-     toggleButton: any;
-     sidebarVisible: boolean;
-     userHeading:string ;
+    private toggleButton: any;
+    private sidebarVisible: boolean;
+    public userHeading:string ;
 
     constructor(location: Location,  private element: ElementRef, private router: Router ,private auth:AuthService) {
       this.location = location;

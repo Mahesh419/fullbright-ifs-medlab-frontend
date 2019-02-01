@@ -11,8 +11,8 @@ import 'rxjs/add/observable/throw';
 })
 export class AuthService {
 
-   url:string = 'path/api/user/login';
-   user:ValidateUser;
+  private url:string = '/path/api/user/login';
+  private user:ValidateUser;
   constructor(private http :HttpClient) { }
 
   public loginUser(userInfo:User):Observable<ValidateUser>{
@@ -24,13 +24,12 @@ export class AuthService {
         
       })
     };
-    console.log(this.url);
     return this.http.post<ValidateUser>(this.url,userInfo,httpOptions)
               .catch(this.errorHandler);
 
   }
 
-  errorHandler(error:HttpErrorResponse){
+  private errorHandler(error:HttpErrorResponse){
       return Observable.throw(error.message);
   }
 

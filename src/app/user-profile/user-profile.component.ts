@@ -17,18 +17,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent implements OnInit {
-   testSet :TestType[];//Store returened test data
-   isLinear = false;
-   testProfiles:TestProfile[] = new Array();//Store selected test profile and test data
-   customProfileName = "Custom";//name of the custom profile
-   customerDetailForm:FormGroup;
-   specimenIds:FormGroup;
-   existingCustomerData:Customer = new Customer();
-   SubTotal:number = 0.0;//total price of customr bill
-   locations:Location[];
-   receipt:Receipt;
-   requestData:RequestData;
-   finalSubmitError;
+  public testSet :TestType[];//Store returened test data
+  public isLinear = false;
+  public testProfiles:TestProfile[] = new Array();//Store selected test profile and test data
+  public customProfileName = "Custom";//name of the custom profile
+  public customerDetailForm:FormGroup;
+  public specimenIds:FormGroup;
+  public existingCustomerData:Customer = new Customer();
+  public SubTotal:number = 0.0;//total price of customr bill
+  public locations:Location[];
+  public receipt:Receipt;
+  public requestData:RequestData;
+  public finalSubmitError;
 
   constructor(private _formBuilder: FormBuilder, private customer:CustomerService, private test:TestService ,private router:Router) { }
 
@@ -206,10 +206,10 @@ export class UserProfileComponent implements OnInit {
   /*+============================================================
   ** Test Whether customer test or not
   **+============================================================*/
-  private isCustomTest(nameProf):boolean{
+  public isCustomTest(nameProf):boolean{
      return (nameProf==this.customProfileName)?false:true;
   }
-  trackByName(index:number,testProf:any){
+  public trackByName(index:number,testProf:any){
     return testProf.profileName;
   }
 }

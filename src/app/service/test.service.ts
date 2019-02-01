@@ -11,11 +11,11 @@ import { RequestData } from '../classes/RequestData';
   providedIn: 'root'
 })
 export class TestService {
-   urlTest:string = 'path/api/testprofile/all';
-   testReciptlUrl :string = 'path/api/testprofile/total';
-   locationURL:string = 'path/api/location';
-   recieptGeneratorURL = 'path/api/receipt/new';
-   finalFormSubmitURL = 'path/api/form/new';
+  private urlTest:string = 'path/api/testprofile/all';
+  private testReciptlUrl :string = 'path/api/testprofile/total';
+  private locationURL:string = 'path/api/location';
+  private recieptGeneratorURL = 'path/api/receipt/new';
+  private finalFormSubmitURL = 'path/api/form/new';
 
   constructor(private http:HttpClient) { }
 

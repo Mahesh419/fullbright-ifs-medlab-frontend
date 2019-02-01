@@ -11,12 +11,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-   passwordField:string = "password";
-   iconPassword:string = "visibility";
-   status:ValidateUser;
-   user : User;
-   error;
-   login = this.fb.group({
+  public passwordField:string = "password";
+  public iconPassword:string = "visibility";
+  public status:ValidateUser;
+  public user : User;
+  public error;
+  public login = this.fb.group({
     username : ['',Validators.required],
     password:['',Validators.required],
   })
