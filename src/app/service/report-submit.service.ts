@@ -11,8 +11,8 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class ReportSubmitService {
-  private reportURL:string = `${environment.baseURL}/api/form/report/`;
-  private dataSendURL = `${environment.baseURL}/api/form/report/data`;
+  private reportURL:string = `${environment.baseURL}/form/report/`;
+  private dataSendURL = `${environment.baseURL}/form/report/data`;
   constructor(private http:HttpClient) { }
 
   public getReport(specimanId:string):Observable<TestReport>{

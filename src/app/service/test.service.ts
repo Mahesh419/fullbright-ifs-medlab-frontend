@@ -12,11 +12,11 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class TestService {
-  private urlTest:string = `${environment.baseURL}/api/testprofile/all`;
-  private testReciptlUrl :string = `${environment.baseURL}/api/testprofile/total`;
-  private locationURL:string = `${environment.baseURL}/api/location`;
-  private recieptGeneratorURL = `${environment.baseURL}/api/receipt/new`;
-  private finalFormSubmitURL = `${environment.baseURL}/api/form/new`;
+  private urlTest:string = `${environment.baseURL}/testprofile/all`;
+  private testReciptlUrl :string = `${environment.baseURL}/testprofile/total`;
+  private locationURL:string = `${environment.baseURL}/location`;
+  private recieptGeneratorURL = `${environment.baseURL}/receipt/new`;
+  private finalFormSubmitURL = `${environment.baseURL}/form/new`;
 
   constructor(private http:HttpClient) { }
 

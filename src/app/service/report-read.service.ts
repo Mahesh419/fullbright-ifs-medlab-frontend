@@ -11,7 +11,7 @@ import { environment } from '../../environments/environment';
 })
 export class ReportReadService {
 
-  private finalReportURL = `${environment.baseURL}/path/api/form/report/view/`
+  private finalReportURL = `${environment.baseURL}/form/report/view/`
   constructor(private http:HttpClient) { }
 
   getDataReport(recieptId):Observable<TestReportData>{

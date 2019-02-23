@@ -12,7 +12,7 @@ import 'rxjs/add/observable/throw';
   providedIn: 'root'
 })
 export class CustomerService {
-  private UrlTpTest:string = `${environment.baseURL}/api/customer/`;
+  private UrlTpTest:string = `${environment.baseURL}/customer/`;
   constructor(private http:HttpClient) { }
 
   public getCustomerByTelephone(tpNo:string):Observable<Customer>{
