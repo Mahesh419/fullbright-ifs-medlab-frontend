@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { Customer } from '../classes/customer';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+
+import { environment } from '../../environments/environment';
+
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 
@@ -9,7 +12,7 @@ import 'rxjs/add/observable/throw';
   providedIn: 'root'
 })
 export class CustomerService {
-  private UrlTpTest:string = "path/api/customer/";
+  private UrlTpTest:string = `${environment.baseURL}/api/customer/`;
   constructor(private http:HttpClient) { }
 
   public getCustomerByTelephone(tpNo:string):Observable<Customer>{
