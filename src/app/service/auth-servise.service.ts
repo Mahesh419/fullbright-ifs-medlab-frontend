@@ -11,7 +11,7 @@ import 'rxjs/add/observable/throw';
 })
 export class AuthService {
 
-  private url:string = '/path/api/user/login';
+  private url:string = 'https://fullbright-medlab-rest.herokuapp.com/api/user/login';
   private user:ValidateUser;
   constructor(private http :HttpClient) { }
 
