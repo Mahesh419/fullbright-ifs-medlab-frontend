@@ -5,13 +5,14 @@ import { ValidateUser } from '../classes/validate-user';
 import { User } from '../classes/user';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  private url:string = 'https://fullbright-medlab-rest.herokuapp.com/api/user/login';
+  private url:string = `${environment.baseURL}/user/login`;
   private user:ValidateUser;
   constructor(private http :HttpClient) { }
 
