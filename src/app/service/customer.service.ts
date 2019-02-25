@@ -4,12 +4,13 @@ import { Customer } from '../classes/customer';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CustomerService {
-  private UrlTpTest:string = "path/api/customer/";
+  private UrlTpTest:string = `${environment.baseURL}/customer/`;
   constructor(private http:HttpClient) { }
 
   public getCustomerByTelephone(tpNo:string):Observable<Customer>{
