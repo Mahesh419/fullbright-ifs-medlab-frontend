@@ -26,21 +26,22 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
   onSubmit(){
-    this.auth.loginUser(this.login.value).subscribe(data => this.status = data,
-                                                      error=> this.error = error );
-    localStorage.setItem('user',JSON.stringify(this.status));
-    if(this.status.user_type == 'RECEPTION'){
+    this.auth.loginUser(this.login.value).subscribe(data => {
+      this.status = data;
+      localStorage.setItem('user',JSON.stringify(this.status));
+      if(this.status.user_type == 'RECEPTION'){
+          this.error = false;
+          this.router.navigate(['']);
+      }
+      else if(this.status.user_type == 'MLT'){
         this.error = false;
-        this.router.navigate(['']);
-    }
-    else if(this.status.user_type == 'MLT'){
-      this.error = false;
-      this.router.navigate(['mlt']);
-    }else{
-      this.error = true;
-    }
-
-    
+        this.router.navigate(['mlt']);
+      }else{
+        this.error = true;
+      }
+  
+    }, error=> this.error = error );
+   
 
   }
 
