@@ -5,14 +5,13 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 import { TestReport } from '../classes/TestReport';
 import { FormGroup } from '@angular/forms';
-import { environment } from '../../environments/environment'; 
 
 @Injectable({
   providedIn: 'root'
 })
 export class ReportSubmitService {
-  private reportURL:string = `${environment.baseURL}/form/report/`;
-  private dataSendURL = `${environment.baseURL}/form/report/data`;
+  private reportURL:string = 'path/api/form/report/';
+  private dataSendURL ="path/api/form/report/data";
   constructor(private http:HttpClient) { }
 
   public getReport(specimanId:string):Observable<TestReport>{

@@ -4,14 +4,12 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 import { Observable } from 'rxjs';
 import { TestReportData } from '../classes/report/test-report-data';
-import { environment } from '../../environments/environment'; 
-
 @Injectable({
   providedIn: 'root'
 })
 export class ReportReadService {
 
-  private finalReportURL = `${environment.baseURL}/form/report/view/`
+  private finalReportURL = "path/api/form/report/view/"
   constructor(private http:HttpClient) { }
 
   getDataReport(recieptId):Observable<TestReportData>{

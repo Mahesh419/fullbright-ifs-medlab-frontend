@@ -6,17 +6,16 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 import { Receipt } from '../classes/receipt';
 import { RequestData } from '../classes/RequestData';
-import { environment } from '../../environments/environment'; 
 
 @Injectable({
   providedIn: 'root'
 })
 export class TestService {
-  private urlTest:string = `${environment.baseURL}/testprofile/all`;
-  private testReciptlUrl :string = `${environment.baseURL}/testprofile/total`;
-  private locationURL:string = `${environment.baseURL}/location`;
-  private recieptGeneratorURL = `${environment.baseURL}/receipt/new`;
-  private finalFormSubmitURL = `${environment.baseURL}/form/new`;
+  private urlTest:string = 'path/api/testprofile/all';
+  private testReciptlUrl :string = 'path/api/testprofile/total';
+  private locationURL:string = 'path/api/location';
+  private recieptGeneratorURL = 'path/api/receipt/new';
+  private finalFormSubmitURL = 'path/api/form/new';
 
   constructor(private http:HttpClient) { }
 

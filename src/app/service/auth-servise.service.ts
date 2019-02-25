@@ -5,14 +5,13 @@ import { ValidateUser } from '../classes/validate-user';
 import { User } from '../classes/user';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
-import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  private url:string = `${environment.baseURL}/user/login`;
+  private url:string = '/path/api/user/login';
   private user:ValidateUser;
   constructor(private http :HttpClient) { }
 
@@ -25,6 +24,7 @@ export class AuthService {
         
       })
     };
+    console.log(this.url);
     return this.http.post<ValidateUser>(this.url,userInfo,httpOptions)
               .catch(this.errorHandler);
 
